@@ -59,7 +59,7 @@ public class CashierApp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel1.setText("Bakso Kekinian");
+        jLabel1.setText("Bakso BoraXXX");
 
         baksourat.setEditable(false);
         baksourat.addActionListener(new java.awt.event.ActionListener() {
