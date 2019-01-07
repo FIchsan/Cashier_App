@@ -212,6 +212,12 @@ public class CashierApp extends javax.swing.JFrame {
     }//GEN-LAST:event_baksouratActionPerformed
 
     private void jCheckBox1BAKSOTELURActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1BAKSOTELURActionPerformed
+  if (jCheckBox1BAKSOTELUR.isSelected() == true){
+            baksotelur.setEditable(true);
+        } else {
+            baksotelur.setEditable(false);
+            baksotelur.setText("");
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1BAKSOTELURActionPerformed
 
@@ -220,11 +226,21 @@ public class CashierApp extends javax.swing.JFrame {
     }//GEN-LAST:event_baksotelurActionPerformed
 
     private void jCheckBox1MIEAYAMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1MIEAYAMActionPerformed
-        // TODO add your handling code here:
+  if (jCheckBox1MIEAYAM.isSelected() == true){
+            mieayam.setEditable(true);
+        } else {
+            mieayam.setEditable(false);
+            mieayam.setText("");
+        }       // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1MIEAYAMActionPerformed
 
     private void jCheckBox1MIEAYAMBAKSOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1MIEAYAMBAKSOActionPerformed
-        // TODO add your handling code here:
+   if (jCheckBox1MIEAYAMBAKSO.isSelected() == true){
+            mieayambakso.setEditable(true);
+        } else {
+            mieayambakso.setEditable(false);
+            mieayambakso.setText("");
+        }       // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1MIEAYAMBAKSOActionPerformed
 
     private void mieayamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mieayamActionPerformed
@@ -236,7 +252,16 @@ public class CashierApp extends javax.swing.JFrame {
     }//GEN-LAST:event_mieayambaksoActionPerformed
 
     private void jCheckBox1BAKSOURATActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1BAKSOURATActionPerformed
+                                                    
         // TODO add your handling code here:
+        if (jCheckBox1BAKSOURAT.isSelected() == true){
+            baksourat.setEditable(true);
+        } else {
+            baksourat.setEditable(false);
+            baksourat.setText("");
+        }
+                       
+    // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1BAKSOURATActionPerformed
 
     private void HITUNGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HITUNGActionPerformed
