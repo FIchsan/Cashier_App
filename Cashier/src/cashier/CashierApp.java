@@ -266,10 +266,49 @@ public class CashierApp extends javax.swing.JFrame {
 
     private void HITUNGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HITUNGActionPerformed
         // TODO add your handling code here:
+        int total = 0;
+         if (jCheckBox1BAKSOURAT.isSelected()) {
+            String BU = baksourat.getText();
+            int jumlahBU = Integer.parseInt(BU);
+            int hargaBU = jumlahBU * 8000;
+            total = total + hargaBU;
+        }
+        if (jCheckBox1BAKSOTELUR.isSelected()) {
+            String BT = baksotelur.getText();
+            int jumlahBT = Integer.parseInt(BT);
+            int hargaBT = jumlahBT * 8000;
+            total = total + hargaBT;
+        }
+        if (jCheckBox1MIEAYAM.isSelected()) {
+            String MA = mieayam.getText();
+            int jumlahMA = Integer.parseInt(MA);
+            int hargaMA = jumlahMA * 6000;
+            total = total + hargaMA;
+        }
+        if (jCheckBox1MIEAYAMBAKSO.isSelected()) {
+            String MAB = mieayambakso.getText();
+            int jumlahMAB = Integer.parseInt(MAB);
+            int hargaMAB = jumlahMAB * 8000;
+            total = total + hargaMAB;
+        }
+        TOTAL.setText(""+total);
     }//GEN-LAST:event_HITUNGActionPerformed
 
     private void HAPUSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HAPUSActionPerformed
         // TODO add your handling code here:
+          baksourat.setEditable(false);
+        baksourat.setText("");
+       
+        baksotelur.setEditable(false);
+        baksotelur.setText("");
+       
+        mieayam.setEditable(false);
+        mieayam.setText("");
+       
+        mieayambakso.setEditable(false);
+        mieayambakso.setText("");
+       
+        TOTAL.setText("");
     }//GEN-LAST:event_HAPUSActionPerformed
 
     /**
