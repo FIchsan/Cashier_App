@@ -35,9 +35,7 @@ public class CashierApp extends javax.swing.JFrame {
         jCheckBox1BAKSOTELUR = new javax.swing.JCheckBox();
         baksotelur = new javax.swing.JTextField();
         jCheckBox1MIEAYAM = new javax.swing.JCheckBox();
-        jCheckBox1MIEAYAMBAKSO = new javax.swing.JCheckBox();
         mieayam = new javax.swing.JTextField();
-        mieayambakso = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         TOTAL = new javax.swing.JTextField();
         HITUNG = new javax.swing.JButton();
@@ -96,24 +94,10 @@ public class CashierApp extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1MIEAYAMBAKSO.setText("Mie Ayam Bakso @ Rp.8000");
-        jCheckBox1MIEAYAMBAKSO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1MIEAYAMBAKSOActionPerformed(evt);
-            }
-        });
-
         mieayam.setEditable(false);
         mieayam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mieayamActionPerformed(evt);
-            }
-        });
-
-        mieayambakso.setEditable(false);
-        mieayambakso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mieayambaksoActionPerformed(evt);
             }
         });
 
@@ -155,16 +139,14 @@ public class CashierApp extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(mieayam, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jCheckBox1MIEAYAMBAKSO))
+                        .addGap(126, 126, 126)
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(HITUNG)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                                 .addComponent(HAPUS))
-                            .addComponent(mieayambakso, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                             .addComponent(TOTAL))))
                 .addGap(111, 111, 111))
             .addGroup(layout.createSequentialGroup()
@@ -189,11 +171,7 @@ public class CashierApp extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox1MIEAYAM)
                     .addComponent(mieayam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1MIEAYAMBAKSO)
-                    .addComponent(mieayambakso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(HITUNG)
                     .addComponent(HAPUS))
@@ -234,22 +212,9 @@ public class CashierApp extends javax.swing.JFrame {
         }       // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1MIEAYAMActionPerformed
 
-    private void jCheckBox1MIEAYAMBAKSOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1MIEAYAMBAKSOActionPerformed
-   if (jCheckBox1MIEAYAMBAKSO.isSelected() == true){
-            mieayambakso.setEditable(true);
-        } else {
-            mieayambakso.setEditable(false);
-            mieayambakso.setText("");
-        }       // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1MIEAYAMBAKSOActionPerformed
-
     private void mieayamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mieayamActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mieayamActionPerformed
-
-    private void mieayambaksoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mieayambaksoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mieayambaksoActionPerformed
 
     private void jCheckBox1BAKSOURATActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1BAKSOURATActionPerformed
                                                     
@@ -285,12 +250,6 @@ public class CashierApp extends javax.swing.JFrame {
             int hargaMA = jumlahMA * 6000;
             total = total + hargaMA;
         }
-        if (jCheckBox1MIEAYAMBAKSO.isSelected()) {
-            String MAB = mieayambakso.getText();
-            int jumlahMAB = Integer.parseInt(MAB);
-            int hargaMAB = jumlahMAB * 8000;
-            total = total + hargaMAB;
-        }
         TOTAL.setText(""+total);
     }//GEN-LAST:event_HITUNGActionPerformed
 
@@ -305,8 +264,8 @@ public class CashierApp extends javax.swing.JFrame {
         mieayam.setEditable(false);
         mieayam.setText("");
        
-        mieayambakso.setEditable(false);
-        mieayambakso.setText("");
+      
+        
        
         TOTAL.setText("");
     }//GEN-LAST:event_HAPUSActionPerformed
@@ -355,11 +314,9 @@ public class CashierApp extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1BAKSOTELUR;
     private javax.swing.JCheckBox jCheckBox1BAKSOURAT;
     private javax.swing.JCheckBox jCheckBox1MIEAYAM;
-    private javax.swing.JCheckBox jCheckBox1MIEAYAMBAKSO;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField mieayam;
-    private javax.swing.JTextField mieayambakso;
     // End of variables declaration//GEN-END:variables
 }
